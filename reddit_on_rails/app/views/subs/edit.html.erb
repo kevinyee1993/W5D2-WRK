@@ -1,0 +1,16 @@
+<h2>Hello this is the edit sub page</h2>
+<form class="" action="<%= sub_url(@sub) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label>Title
+    <input type="text" name="sub[title]" value="<%= @sub.title %>">
+  </label>
+  <br>
+  <label>Description
+    <input type="textarea" name="sub[description]" value="<%= @sub.description %>">
+  </label>
+  <br>
+  <input type="submit" name="" value="Edit sub!">
+
+</form>
